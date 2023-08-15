@@ -1,8 +1,15 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import './TaskCard.css'
+import './TaskCard.css';
 
-const TaskCard = (props) => {
+interface TaskCardProps {
+  title: string;
+  dueDate: string | null;
+  completedAtDate: string | null;
+  assigneeName: string;
+}
+
+const TaskCard = (props: TaskCardProps) => {
     const isCompleted = props.completedAtDate !== null;
     return (
         <div className="bg-white rounded-lg p-4 shadow-md mb-4">
