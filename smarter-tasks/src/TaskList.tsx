@@ -1,26 +1,23 @@
 import React from "react";
 import Task from "./Task";
+import { TaskItem } from "./types";
 
 interface Props {
-}
-
-interface TaskItem {
-  title: string
-}
-interface State {
   tasks: TaskItem[];
 }
 
+// interface TaskItem {
+//   title: string;
+// }
+
+interface State { }
+
 class TaskList extends React.Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-      this.state = {
-          tasks: [{ title: "Pay rent" }, { title: "Submit assignment" }],
-      };
-  }
+  
   render() {
-    return this.state.tasks.map((task) => <Task title={task.title} />);
+    return this.props.tasks.map((task, idx) => (
+      <Task key={idx} title={task.title} />
+    ));
   }
 }
-
-export default TaskList
+export default TaskList;
