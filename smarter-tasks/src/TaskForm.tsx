@@ -68,6 +68,7 @@ class TaskForm extends React.Component<TaskFormProps, TaskFormState> {
                 />
                 <button
                     type="submit"
+                    id="addTaskButton"
                     className="ml-2 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md shadow-md focus:outline-none focus:ring focus:border-blue-300"
                 >Add item</button>
             </form>
