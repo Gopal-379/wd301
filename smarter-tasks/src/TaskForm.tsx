@@ -5,6 +5,7 @@ interface TaskFormProps {
     addTask: (task: TaskItem) => void;
 }
 interface TaskFormState {
+    id: string;
     title: string;
     dueDate: string;
     description: string;
@@ -12,6 +13,7 @@ interface TaskFormState {
 
 const TaskForm = (props: TaskFormProps) => {
     const [formState, setFormState] = React.useState<TaskFormState>({
+        id: Number(new Date()).toString(),
         title: "",
         description: "",
         dueDate: "",
@@ -21,12 +23,14 @@ const TaskForm = (props: TaskFormProps) => {
         console.log(`${event.target.value}`);
         setFormState({ ...formState, title: event.target.value });
     };
+
     const descriptionChanged: React.ChangeEventHandler<HTMLInputElement> = (
     event
     ) => {
         console.log(`${event.target.value}`);
         setFormState({ ...formState, description: event.target.value });
     };
+
     const dueDateChanged: React.ChangeEventHandler<HTMLInputElement> = (
     event
     ) => {
@@ -41,12 +45,13 @@ const TaskForm = (props: TaskFormProps) => {
             return;
         }
         props.addTask(formState);
-        setFormState({ title: "", description: "", dueDate: "" });
+        setFormState({ id:String(Number(formState.id) + 1), title: "", description: "", dueDate: "" });
     };
 
    
     return (
         <form onSubmit={addTask} className="grid gap-4">
+            <input type="hidden" id="id" name="id" value={formState.id}/>
             <input
                 type="text"
                 name="title"
