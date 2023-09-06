@@ -11,7 +11,7 @@ const Notfound = () => {
                     Sorry, the page you are looking for does not exist.
                 </p>
                 <button
-                    onClick={() => redirect('/home')}
+                    onClick={() => redirect('/')}
                     className="text-blue-500 hover:underline focus:outline-none focus:ring focus:ring-blue-300 transition"
                 >
                     Go back to the homepage
