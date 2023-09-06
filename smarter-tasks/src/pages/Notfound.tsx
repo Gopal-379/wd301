@@ -12,7 +12,7 @@ const Notfound = () => {
                 </p>
                 <button
                     id="backToHomeButton"
-                    onClick={() => redirect('/')}
+                    onClick={() => redirect('/home')}
                     className="text-blue-500 hover:underline focus:outline-none focus:ring focus:ring-blue-300 transition"
                 >
                     Go back to the homepage
