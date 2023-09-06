@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-const NotFound = () => {
+const Notfound = () => {
     const redirect = useNavigate();
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100">
@@ -21,4 +21,4 @@ const NotFound = () => {
     );
 };
 
-export default NotFound;
+export default Notfound;
