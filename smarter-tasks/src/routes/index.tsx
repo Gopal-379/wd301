@@ -5,6 +5,7 @@ import Signup from "../pages/signup"
 import Logout from "../pages/logout"
 import Projects from "../pages/projects"
 import Members from "../pages/members"
+import Notfound from "../pages/Notfound";
 import AccountLayout from "../layouts/account"
 import ProtectedRoute from "./ProtectedRoutes"
 
@@ -24,6 +25,14 @@ const router = createBrowserRouter([
     {
         path: "/logout",
         element: <Logout />
+    },
+    {
+        path: "/notfound",
+        element: <Notfound />
+    },
+    {
+        path: "*",
+        element: <Notfound />
     },
     //Protected Routes
     {
