@@ -6,7 +6,7 @@ import Logout from "../pages/logout"
 import Projects from "../pages/projects"
 import Members from "../pages/members"
 import AccountLayout from "../layouts/account"
-import ProtectedRoute from "../ProtectedRoute"
+import ProtectedRoute from "./ProtectedRoutes"
 
 const router = createBrowserRouter([
     {
