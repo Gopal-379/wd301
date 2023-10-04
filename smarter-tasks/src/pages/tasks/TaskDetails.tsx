@@ -9,6 +9,7 @@ import { updateTask } from "../../context/task/actions";
 import { useUsersState } from "../../context/members/context";
 import { useProjectsState } from "../../context/projects/context";
 import { TaskDetailsPayload } from "../../context/task/types";
+import Comments from "./Comments";
 
 type TaskFormUpdatePayload = TaskDetailsPayload & {
     selectedPerson: string;
@@ -198,6 +199,7 @@ const TaskDetails = () => {
                         </button>
                         </form>
                     </div>
+                    <Comments />                
                     </Dialog.Panel>
                 </Transition.Child>
                 </div>

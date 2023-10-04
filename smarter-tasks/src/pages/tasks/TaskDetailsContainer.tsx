@@ -1,4 +1,5 @@
 /* eslint-disable prefer-const */
+import { CommentsProvider } from "../../context/comment/context";
 import { useProjectsState } from "../../context/projects/context";
 import { useTasksState } from "../../context/task/context";
 import TaskDetails from "./TaskDetails";
@@ -19,7 +20,11 @@ const TaskDetailsContainer = () => {
         return <>No such task!</>;
     }
 
-    return <TaskDetails />;
+    return (
+        <CommentsProvider>
+            <TaskDetails />
+        </CommentsProvider>
+    );
 };
 
 export default TaskDetailsContainer;
