@@ -7,7 +7,7 @@ import Projects from "../pages/projects"
 import Members from "../pages/members"
 import Notfound from "../pages/Notfound"
 import AccountLayout from "../layouts/account"
-import ProtectedRoute from "./ProtectedRoutes"
+import ProtectedRoute from "./ProtectedRoute"
 import ProjectContainer from "../pages/projects/ProjectContainer"
 import ProjectDetails from "../pages/project_details"
 import NewTask from "../pages/tasks/NewTask";
